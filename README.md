@@ -18,5 +18,4 @@ publishes it as the `latest` release asset. Stable download URL:
 https://github.com/riverray121/elijah-resume/releases/latest/download/resume.pdf
 ```
 
-My personal site's "Download Resume" button points at this URL, so editing
-`main.tex` and pushing is all it takes to update the live resume.
+My personal site's "Download Resume" button points at this URL.

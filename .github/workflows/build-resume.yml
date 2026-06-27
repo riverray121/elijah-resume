@@ -26,15 +26,15 @@ jobs:
         with:
           root_file: main.tex
 
-      # Stable asset name so the download URL never changes
+      # Asset name becomes the downloaded filename
       - name: Rename PDF
-        run: cp build/main.pdf resume.pdf
+        run: cp build/main.pdf "Elijah Retzlaff Resume.pdf"
 
-      # Serve newest build at a fixed URL: releases/latest/download/resume.pdf
+      # Serve newest build at a fixed latest-release URL
       - name: Publish to latest release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: Latest Resume
-          files: resume.pdf
+          files: Elijah Retzlaff Resume.pdf
           make_latest: true
