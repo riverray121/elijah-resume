@@ -1,7 +1,17 @@
 %-------------------------
 % Resume in Latex
-% Author : Sourabh Bajaj
-% License : MIT
+% Author: Sourabh Bajaj
+% License: MIT
+% Modified to remove bullet points
+
+% ACCOMPLISHED X BY IMPLEMENTING Y TO ACHIEVE Z
+% MEASURABLE RESULTS
+
+% PROJECTS
+% What it was, languages, technologies, individual vs team, course vs independent
+
+% caveat languages with experience level
+
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -18,6 +28,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+\usepackage{amsmath}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -43,15 +54,15 @@
   \vspace{5pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure that generated pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
+
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{2pt}}
-    % USED TO BE 5pt
+    \textbf{#1}{: #2 \vspace{1pt}}
   }
 }
 
@@ -63,18 +74,21 @@
 
 \newcommand{\resumeItemEmph}[2]{
   \par\small{
-    \textbf{\emph{#1}}{\emph{: #2}\vspace{2pt}}
-    % USED TO BE 5pt
+    \textbf{\emph{#1}}{\emph{: #2}\vspace{1pt}}
   }
 }
 
+\newcommand{\resumeAboutItem}[1]{
+  \item\small{
+    {#1}
+  }
+}
 
-% Just in case someone needs a heading that does not need to be in a list
 \newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-2pt}
+  \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -82,266 +96,124 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \small#3 & \small #4 \\
-    \end{tabular*}\vspace{-2pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubheadingSimple}[2]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-2pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \text{\small#1} & \text{\small #2} \\
-    \end{tabular*}\vspace{-2pt}
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    {\small#1} & {\small #2} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-2pt}}
-\newcommand{\resumeSubItemSimple}[1]{\resumeItemSimple{#1}\vspace{-2pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
+\newcommand{\resumeSubItemSimple}[1]{\resumeItemSimple{#1}\vspace{-5pt}}
+\newcommand{\resumeSubAboutItem}[1]{\resumeAboutItem{#1}\vspace{-5pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+% Custom commands modified to remove bullet points
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={},leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListSimpleStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListSimpleEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\resumeItemListSimpleStart}{\begin{itemize}}
-\newcommand{\resumeItemListSimpleEnd}{\end{itemize}\vspace{-2pt}}
-%-------------------------------------------
+\newcommand{\resumeAboutItemListStart}{\begin{itemize}[label={},leftmargin=*]}
+\newcommand{\resumeAboutItemListEnd}{\end{itemize}\vspace{-20pt}}
+
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l}
-  \textbf{\Large Elijah Retzlaff} & 
-  \textbf{New York, New York}\\
-  (541) 282-4650 & 
+  \textbf{\Large Elijah Retzlaff} &
+  \textbf{Taipei, Taiwan}\\
+  +1 541 282 4650 &
   \href{https://github.com/riverray121}{github.com/riverray121}\\
-  \href{mailto:elijah.retzlaff@columbia.edu}{elijah.retzlaff@columbia.edu} & 
+  \href{mailto:eliriver@gmail.com}{eliriver@gmail.com} &
   \href{https://www.linkedin.com/in/elijah-retzlaff/}{linkedin.com/in/elijah-retzlaff/} \\
+  \href{https://riverray121.github.io/elijah-website.github.io/}{riverray121.github.io/elijah-website.github.io/} \\
 \end{tabular*}
-
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
-  
-
-
-    % \resumeSubheading
-    %   {Stanford Summer Session}{Stanford, CA}
-    %   {Symbolic Systems}{2022}
-    %   \resumeItemListSimpleStart
-    %   \resumeItemSimple{Minds and Machines Undergraduate Course}
-    %   % \resumeItemSimple{Relevant Coursework: Vector and Multivariable Calculus, General Genetics, Differential Equations}
-    %   % \resumeItemSimple{Withdrew to pursue work opportunity (68/120 credits completed)}
-    %   \resumeItemListSimpleEnd
-      
     \resumeSubheading
       {Columbia University}{New York, NY}
-      {B.A. in Computer Science}{2023 -- 2025}
+      {B.A. in Computer Science \textbar\ GPA: 3.92/4.00}{May 2025}
       \resumeItemListSimpleStart
-      \resumeItemSimple{Columbia Space Initiative (CSI), Columbia Hiking Club}
-      % \resumeItemSimple{Relevant Coursework: Vector and Multivariable Calculus, General Genetics, Differential Equations}
-      % \resumeItemSimple{Withdrew to pursue work opportunity (68/120 credits completed)}
+        \resumeItemSimple{Relevant Coursework: Parallel Optimization for Robotics (CUDA), Computer Architecture (C), Advanced Programming (C), Artificial Intelligence (Python), Linear Algebra for ML}
+        \resumeItemSimple{Columbia Business School SWE Internship (Spring 2024)}
       \resumeItemListSimpleEnd
+  \resumeSubHeadingListEnd
 
-
-    \resumeSubheading
-      {Tufts University School of Engineering}{Medford, MA}
-      {B.S.E. in Biomedical Engineering and Biotechnology (68/120 Credits)}{2019 -- 2021}
-      \resumeItemListSimpleStart
-      \resumeItemSimple{Tufts Synthetic Biology Club; Dean’s List; 3.54/4.00 GPA; ACT 35}
-      % \resumeItemSimple{Relevant Coursework: Vector and Multivariable Calculus, General Genetics, Differential Equations}
-      % \resumeItemSimple{Withdrew to pursue work opportunity (68/120 credits completed)}
-      \resumeItemListSimpleEnd
-    % \resumeSubheadingSimple
-    %   {External Education}{}
-    %   \resumeItemListSimpleStart
-    %   \resumeItemSimple{Stanford Summer Session: Minds and Machines Undergraduate Course, Stanford, CA, Summer 2022}
-    %   %\resumeItemSimple{Coursera: DeepLearning.AI: Specialization in Deep Learning, Imperial College London: Specialization in Mathematics for Machine Learning, Wharton University of Pennsylvania: Specialization in Entrepreneurship, Aug. 2022 – Feb. 2023}
-    %   \resumeItemSimple{Coursera: DeepLearning.AI: Specialization in Deep Learning, Aug. 2022 – Jan. 2023}
-    %   \resumeItemSimple{Coursera: Imperial College London: Specialization in Mathematics for Machine Learning, Aug. 2022 – Feb. 2023}
-    %   \resumeItemSimple{Coursera: Wharton University of Pennsylvania: Specialization in Entrepreneurship, Aug. 2022 – Jan. 2023}
-    %   % \resumeItemSimple{Coursera: University of California Davis: Materials Science, Oct. 2022}
-    %   \resumeItemListSimpleEnd
+%-----------SKILLS AND INTERESTS-----------------
+\section{Skills and Technologies}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}{Python, C, C++, TypeScript, JavaScript, PHP, HTML, CSS}
+    \resumeSubItem{Technologies}{React, Node.js, CUDA, Docker, ROS, Arduino, Flask, Terraform, GCP, REST APIs}
+    \resumeSubItem{Tools}{Git, Fusion 360}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+    \resumeSubheading
+      {ASUS Robotics and AI Center}{Taipei, Taiwan}
+      {Robotics Software Engineer}{Aug. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected Full-Stack Platform}
+          {Built a Next.js application from the ground up for user management and data processing pipeline, backed by Terraform-managed GCP infrastructure (Cloud Functions, Cloud Run, batch jobs) and CI/CD pipelines.}
+        \resumeItem{Built 3D Gaussian Splat \& Mesh Renderers}
+          {Implemented rendering pipelines across Three.js, Cesium, Spark.js, and PlayCanvas with benchmarking harnesses to evaluate performance and visual fidelity; benchmarking and renderer optimizations drove a 10x FPS improvement across the rendering stack.}
+        \resumeItem{Drove Product Direction \& Team Growth}
+          {As sole engineering owner, partner with business development and non-technical stakeholders to define and execute the product roadmap; authored job descriptions and evaluated technical candidates to scale the team.}
+      \resumeItemListEnd
 
     \resumeSubheading
-      {Innovations Health Devices }{Citrus Heights, CA}
-      {Product Manager}{Feb. 2021 -- Aug. 2022}
+      {SmartEd Systems, LLC}{Remote}
+      {Software Engineering Intern}{Jun. 2024 -- Aug. 2024}
       \resumeItemListStart
-        \resumeItem{Led Product R\&D of Kinoped Medical Robot (
-        \href{https://www.kinoped.com/wp-content/uploads/2022/04/Kinoped-Brochure.pdf}{Visual Link} $\vert$
-        \href{https://drive.google.com/drive/folders/1g67GfFHje15u_daL_TQhBVZy55moPixC}{Google Drive Link })}
-          {Recruited and trained team of 10 engineers and established a culture of efficiency, attention to detail, and open communication, leading to more R\&D progress in 1 year than in the previous 7 years combined.}
-        \resumeItem{Managed Team and Adapted Project Plans as Needed}
-          {Led team through 4 product road-maps, 12 development sprints, 14 monthly budgets, and 4 iterations of custom PCB hardware and embedded RTOS software and 3 versions of integrated system software.
-          \par This kept the team's morale high during budget cuts, kept CEO informed and confident of progress, and ensured both parties were clear on direction and able to proactively address problems.}
-        \resumeItem{Helped Build Fully Functional Prototype in 10 Months}
-          {Planned and coordinated team sub-projects and integrated them into a cohesive whole through a modular system architecture, focused discussions on system interactions, and insistence on high standards. 
-          \par This encouraged individual deep dives into problems without fear of repercussions, creation of solutions built on  long-term goals, regular testable and presentable progress, and minimizing team conflict.}
-        % \resumeItem{Thing}
-        %   { .
-        %   \par This resulted in incremental and rapid progress of development, quick feedback on solutions, and fine tuning of team dynamics and }
-        \resumeItem{Developed Corporate Relationships}
-          {Secured pre-release access to Robotec.AI R2FU ROS to Unity communications software and developed advisory relationship with Kollabra Consulting CEO through direct outreach and development of strategic relationships, allowing for large leaps in technical progress.}
-        \resumeItem{Pursued Series A Fundraising}
-          {Led preliminary outreach efforts and created fundraising materials for planned Series A through technical presentations, product demonstrations, and networking events 
-          % (NFL Combine: Strength and Conditioning Coaches Summit 2022, Tech Crunch: Early Stage 2022, Tech Crunch: Annual Summer Party 2022). 
-          \par This resulted in 40+ contacts, 15+ follow-up meetings, and numerous discussions with potential investors.}
-          
-        \resumeItemEmph{Tools}
-          {Azure DevOps, MS Project, ROS1/2, Azure PostgreSQL, UnityXR, Xsens Mocap, 
-          Qt, 
-          Solidworks, 
-          Fusion360, 
-          Power and Metal Fab Tools, Soldering and Wiring Tools, 3D Printing, 
-          Lean Startup Principles}
+        \resumeItem{Streamlined User Experience with SSO}
+          {Implemented PowerSchool Single Sign-On (SSO) using PHP and JavaScript, reducing login friction for 400+ users and increasing system adoption.}
+        \resumeItem{Secured New Clients through Canvas LTI Integration}
+          {Developed Canvas LTI 1.3 integration (OAuth \& OIDC) for SES PHP web app, leading to a district-wide contract based on feature demand.}
       \resumeItemListEnd
-      
-% --------Multiple Positions Heading------------
-   \resumeSubSubheading
-    {Biomedical Engineering Intern}{May 2020 - Sep. 2020}
-    \resumeItemListStart
-        \resumeItem{Built Prototype Robotic Control Software}
-         {Designed and programmed (C++ and Python) a robotic simulation in Gazebo and a ROS1 controller based on keyboard input to act as a starting point for the control system of a new medical device.}
-       \resumeItem{Contributed to Machine Designs}
-         {Suggested design improvements for medical devices in development through a 20-page technical write-up on improving mechanical advantage and efficiency.}
-    \resumeItemListEnd
-   
-   \resumeSubHeadingListEnd
-   
-%-------------------------------------------      
-% --------Multiple Positions Heading------------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
-    % \resumeSubheading
-    %   {Freelance Developer}{Remote}
-    %   {Software Developer}{Apr. 2020 - Dec. 2022}
-    %   \resumeItemListStart
-    %     \resumeItem{Jump Scheduler - Sep. 2022}
-    %       {Web-based school student scheduling software. Full stack web app development using Flask, AWS elastic beanstalk, and Stripe.}
-    %     \resumeItem{Pronto! - Sep. 2020}
-    %       {iOS application for group organization and communication during Black Lives Matter protests.}
-    %     \resumeItem{Ashland QuaranTeam – Apr. 2020}
-    %       {Marketplace app for small business social distancing. iOS development using XCode, Firebase, and Stripe.}
-
-    %   \resumeItemListEnd
-    
-    % \resumeSubheading
-    %   {Amazon.com Information Security}{Seattle, WA}
-    %   {Software Development Engineer II}{Nov. 2011 - Nov. 2014}
-    %   \resumeItemListStart
-    %     \resumeItem{Internal Incident Response Website}
-    %       {Led the development of an internal website that handled requests for security-related information by incident responders. This allowed engineers to make quick risk-decisions without the need to formulate SQL and log queries during an incident, speeding their time to resolve incidents. Worked with users to prioritize features and improve usability.}
-    %     \resumeItem{Graph Datastore API}
-    %       {Designed and built a web API to ingest data into a graph datastore containing security-related information. This database provided the foundation for Amazon to reason about its security posture in an automated, scalable way. Provided clients with an easy-to-use API, speeding their development. Used strict validation to keep the dataset clean.}
-    %     \resumeItemEmph{Tools}
-    %       {Java, Ruby, Rails, JavaScript, jQuery, AWS, MySQL, Linux, Git, Scrum}
-    %   \resumeItemListEnd
-  
-%-----------EDUCATION-----------------
-% \section{Volunteering}
-%   \resumeSubHeadingListStart
-%     \resumeSubheading
-%       {Ashland Middle School}{Ashland, OR}
-%       {6th Grade Language Arts Teacher Assistant}{Jan. 2023 -- May 2023}
-%       \resumeItemListSimpleStart
-%       \resumeItemSimple{Worked with students one on one and in small groups; Taught life skills; Assisted with class prep;}
-%       \resumeItemListSimpleEnd
-%   \resumeSubHeadingListEnd
-
-  
-% %-----------EDUCATION-----------------
-% \section{Education}
-%   \resumeSubHeadingListStart
-  
-
-
-%     % \resumeSubheading
-%     %   {Stanford Summer Session}{Stanford, CA}
-%     %   {Symbolic Systems}{2022}
-%     %   \resumeItemListSimpleStart
-%     %   \resumeItemSimple{Minds and Machines Undergraduate Course}
-%     %   % \resumeItemSimple{Relevant Coursework: Vector and Multivariable Calculus, General Genetics, Differential Equations}
-%     %   % \resumeItemSimple{Withdrew to pursue work opportunity (68/120 credits completed)}
-%     %   \resumeItemListSimpleEnd
-      
-%     \resumeSubheading
-%       {Columbia University}{New York, NY}
-%       {BA Computer Science}{2023 -- 2025}
-%       \resumeItemListSimpleStart
-%       \resumeItemSimple{Columbia Space Initiative (CSI), Columbia Hiking Club}
-%       % \resumeItemSimple{Relevant Coursework: Vector and Multivariable Calculus, General Genetics, Differential Equations}
-%       % \resumeItemSimple{Withdrew to pursue work opportunity (68/120 credits completed)}
-%       \resumeItemListSimpleEnd
-
-
-%     \resumeSubheading
-%       {Tufts University School of Engineering}{Medford, MA}
-%       {BSE Biomedical Engineering and Biotechnology (Incomplete)}{2019 -- 2021}
-%       \resumeItemListSimpleStart
-%       \resumeItemSimple{Tufts Synthetic Biology Club; Dean’s List; 3.54/4.00 GPA; ACT 35}
-%       % \resumeItemSimple{Relevant Coursework: Vector and Multivariable Calculus, General Genetics, Differential Equations}
-%       % \resumeItemSimple{Withdrew to pursue work opportunity (68/120 credits completed)}
-%       \resumeItemListSimpleEnd
-%     % \resumeSubheadingSimple
-%     %   {External Education}{}
-%     %   \resumeItemListSimpleStart
-%     %   \resumeItemSimple{Stanford Summer Session: Minds and Machines Undergraduate Course, Stanford, CA, Summer 2022}
-%     %   %\resumeItemSimple{Coursera: DeepLearning.AI: Specialization in Deep Learning, Imperial College London: Specialization in Mathematics for Machine Learning, Wharton University of Pennsylvania: Specialization in Entrepreneurship, Aug. 2022 – Feb. 2023}
-%     %   \resumeItemSimple{Coursera: DeepLearning.AI: Specialization in Deep Learning, Aug. 2022 – Jan. 2023}
-%     %   \resumeItemSimple{Coursera: Imperial College London: Specialization in Mathematics for Machine Learning, Aug. 2022 – Feb. 2023}
-%     %   \resumeItemSimple{Coursera: Wharton University of Pennsylvania: Specialization in Entrepreneurship, Aug. 2022 – Jan. 2023}
-%     %   % \resumeItemSimple{Coursera: University of California Davis: Materials Science, Oct. 2022}
-%     %   \resumeItemListSimpleEnd
-%   \resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------------
-\section{Skills and Interests}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Skills}
-      {C, C++, Python 3, Project Management, Relationship Building, Fabrication (Wood, Welding, 3D Printing)
-      % Basic CAD
-      }
-    \resumeSubItem{Interests}
-      {Reading, Human Connection, String Theory, The Wire, AI, Quantum Compute, Cosmology, Music 
-      % Nebraska Cornhuskers
-      % Space, Music, Garage Projects
-      % (
-      % \href{https://drive.google.com/drive/folders/1Sz3xxrakUAOTNUSsDPXg798YsAy2hHM3}{Google Drive Link}
-      % )
-      }
+    \resumeSubheading
+      {Innovations Health Devices, LLC}{Citrus Heights, CA}
+      {Engineering \& Product Lead}{Feb. 2021 -- Aug. 2022}
+      \resumeItemListStart
+        \resumeItem{Led Product Development of Kinoped Medical Robot}
+          {Directed a cross-functional team of 10 engineers, delivering a fully functional prototype within 10 months. (
+          \href{https://www.kinoped.com/wp-content/uploads/2022/04/Kinoped-Brochure.pdf}{Visual Link} $\vert$
+          \href{https://drive.google.com/drive/folders/1g67GfFHje15u_daL_TQhBVZy55moPixC}{Google Drive Link })}
+        \resumeItem{Developed Robotic Control Software}
+          {Built a robotic control framework in C++ and Python using ROS and Gazebo, integrating path planning, simulation, and real-world control via serial peripherals to interface with custom hardware and embedded systems.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeItemListStart
+    \resumeItem{GPU-Accelerated Graph Search Optimization - Dec. 2024}
+      {Implemented GPU-accelerated graph search optimization for BFS through CUDA-based parallelization to reduce computational bottlenecks in real-time robotics and AI applications.
+      (\href{https://github.com/riverray121/parallel-opt-final.git}{Code Link})}
+    \resumeItem{SIMD Vectorized Multiplication for Multi-Precision Arithmetic - Oct. 2024}
+      {Implemented SIMD vectorized vector multiplication using Intel Intrinsics (specifically AVX2 instructions), achieving up to 57.2x speedup compared to naive implementations.
+      (\href{https://gist.github.com/riverray121/36a6759d687437f5895c47506feee87f}{Code Link})}
+    \resumeItem{Web Server Implementation in C - Dec. 2023}
+      {Developed a web server in C to handle HTTP/1.0 GET requests, static file serving, and secure request handling. Implemented error responses, logging, and directory traversal prevention. Integrated dynamic content via a persistent TCP connection for real-time database lookups.
+      (\href{https://gist.github.com/riverray121/1f3b39c7c0ff969b66f5e0c4ea6281f1}{Code Link})}
+  \resumeItemListEnd
 
-
-%-------------------------------------------
 \end{document}
