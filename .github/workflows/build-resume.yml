@@ -1,0 +1,40 @@
+name: Build Resume PDF
+
+# Rebuild and republish the PDF whenever the source changes
+on:
+  push:
+    branches: [main]
+    paths:
+      - main.tex
+      - .latexmkrc
+      - .github/workflows/build-resume.yml
+  workflow_dispatch:
+
+# Required to create/update the release that hosts the PDF
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Compiles main.tex; .latexmkrc directs output to build/main.pdf
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+
+      # Stable asset name so the download URL never changes
+      - name: Rename PDF
+        run: cp build/main.pdf resume.pdf
+
+      # Serve newest build at a fixed URL: releases/latest/download/resume.pdf
+      - name: Publish to latest release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Resume
+          files: resume.pdf
+          make_latest: true
