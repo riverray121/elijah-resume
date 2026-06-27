@@ -26,9 +26,9 @@ jobs:
         with:
           root_file: main.tex
 
-      # Asset name becomes the downloaded filename
+      # Asset name becomes the downloaded filename (no spaces allowed by GitHub)
       - name: Rename PDF
-        run: cp build/main.pdf "Elijah Retzlaff Resume.pdf"
+        run: cp build/main.pdf Elijah-Retzlaff-Resume.pdf
 
       # Serve newest build at a fixed latest-release URL
       - name: Publish to latest release
@@ -36,5 +36,5 @@ jobs:
         with:
           tag_name: latest
           name: Latest Resume
-          files: Elijah Retzlaff Resume.pdf
+          files: Elijah-Retzlaff-Resume.pdf
           make_latest: true

@@ -15,7 +15,7 @@ On every push to `main` that changes `main.tex`, a GitHub Action
 publishes it as the `latest` release asset. Stable download URL:
 
 ```
-https://github.com/riverray121/elijah-resume/releases/latest/download/resume.pdf
+https://github.com/riverray121/elijah-resume/releases/latest/download/Elijah-Retzlaff-Resume.pdf
 ```
 
 My personal site's "Download Resume" button points at this URL.
