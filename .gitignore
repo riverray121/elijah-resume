@@ -6,3 +6,4 @@ build/
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+tailored/
