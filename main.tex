@@ -156,14 +156,6 @@
       \resumeItemListSimpleEnd
   \resumeSubHeadingListEnd
 
-%-----------SKILLS AND INTERESTS-----------------
-\section{Skills and Technologies}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Languages}{Python, C, C++, TypeScript, JavaScript, PHP, HTML, CSS}
-    \resumeSubItem{Technologies}{React, Node.js, CUDA, Docker, ROS, Arduino, Flask, Terraform, GCP, REST APIs}
-    \resumeSubItem{Tools}{Git, Fusion 360}
-  \resumeSubHeadingListEnd
-
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -173,6 +165,8 @@
       \resumeItemListStart
         \resumeItem{Architected Full-Stack Platform}
           {Built a Next.js application from the ground up for user management and data processing pipeline, backed by Terraform-managed GCP infrastructure (Cloud Functions, Cloud Run, batch jobs) and CI/CD pipelines.}
+        \resumeItem{Built Internal Pipeline Diagnostics Tool}
+          {On my own initiative, created an internal web tool to run and diagnose every stage of our deployed 3D reconstruction pipeline, triggering Cloud Run functions and batch jobs, inspecting intermediate artifacts, and surfacing per-stage metrics; turned a multi-hour manual check into minutes and caught stage failures before deploy.}
         \resumeItem{Built 3D Gaussian Splat \& Mesh Renderers}
           {Implemented rendering pipelines across Three.js, Cesium, Spark.js, and PlayCanvas with benchmarking harnesses to evaluate performance and visual fidelity; benchmarking and renderer optimizations drove a 10x FPS improvement across the rendering stack.}
         \resumeItem{Drove Product Direction \& Team Growth}
@@ -184,9 +178,9 @@
       {Software Engineering Intern}{Jun. 2024 -- Aug. 2024}
       \resumeItemListStart
         \resumeItem{Streamlined User Experience with SSO}
-          {Implemented PowerSchool Single Sign-On (SSO) using PHP and JavaScript, reducing login friction for 400+ users and increasing system adoption.}
+          {Implemented PowerSchool Single Sign-On (SSO) in PHP and JavaScript for an enterprise B2B web app, reducing login friction for 400+ users and increasing system adoption.}
         \resumeItem{Secured New Clients through Canvas LTI Integration}
-          {Developed Canvas LTI 1.3 integration (OAuth \& OIDC) for SES PHP web app, leading to a district-wide contract based on feature demand.}
+          {Developed Canvas LTI 1.3 integration (OAuth \& OIDC) for the SES PHP web app, building both the user-facing flow and backend service wiring, leading to a district-wide contract based on feature demand.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -194,7 +188,7 @@
       {Engineering \& Product Lead}{Feb. 2021 -- Aug. 2022}
       \resumeItemListStart
         \resumeItem{Led Product Development of Kinoped Medical Robot}
-          {Directed a cross-functional team of 10 engineers, delivering a fully functional prototype within 10 months. (
+          {Directed a cross-functional team of 10 engineers, collaborating with designers and stakeholders to deliver a fully functional prototype within 10 months. (
           \href{https://www.kinoped.com/wp-content/uploads/2022/04/Kinoped-Brochure.pdf}{Visual Link} $\vert$
           \href{https://drive.google.com/drive/folders/1g67GfFHje15u_daL_TQhBVZy55moPixC}{Google Drive Link })}
         \resumeItem{Developed Robotic Control Software}
@@ -215,5 +209,12 @@
       {Developed a web server in C to handle HTTP/1.0 GET requests, static file serving, and secure request handling. Implemented error responses, logging, and directory traversal prevention. Integrated dynamic content via a persistent TCP connection for real-time database lookups.
       (\href{https://gist.github.com/riverray121/1f3b39c7c0ff969b66f5e0c4ea6281f1}{Code Link})}
   \resumeItemListEnd
+
+%-----------SKILLS AND INTERESTS-----------------
+\section{Skills and Technologies}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}{Python, TypeScript, JavaScript, HTML, CSS, PHP, C++, C}
+    \resumeSubItem{Technologies}{React, Next.js, Node.js, Three.js, REST APIs, GCP, Terraform, Docker, Git, CUDA, ROS, Arduino}
+  \resumeSubHeadingListEnd
 
 \end{document}
